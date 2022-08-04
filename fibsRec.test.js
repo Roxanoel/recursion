@@ -7,7 +7,7 @@ test('Passing in 2 returns [0, 1]', () => {
     expect(fibsRec(2)).toStrictEqual([0, 1]);
 });
 test('Passing in 3 returns [0, 1, 1]', () => {
-    expect(fibsRec(3).toBe([0, 1, 1]));
+    expect(fibsRec(3)).toStrictEqual([0, 1, 1]);
 });
 test('Returns correct fibonacci sequence', () => {
     expect(fibsRec(8)).toStrictEqual([0, 1, 1, 2, 3, 5, 8, 13]);
