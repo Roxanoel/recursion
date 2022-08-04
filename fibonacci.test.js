@@ -1,5 +1,3 @@
-const { expect } = require('expect');
-const { test } = require('picomatch');
 const fibonacci = require('./fibonacci');
 
 test('Passing in 1 returns [0]', () => {
