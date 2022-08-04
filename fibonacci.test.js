@@ -11,8 +11,8 @@ test('Returns "Invalid parameter" if non-number is passed in', () => {
     expect(fibonacci('a')).toBe("Invalid parameter");
 });
 test('Returns "Invalid parameter" if negative number is passed in', () => {
-    expect(fibonacci(-8).toBe("Invalid parameter"));
+    expect(fibonacci(-8)).toBe("Invalid parameter");
 });
 test('Returns "Invalid parameter" if 0 is passed in', () => {
-    expect(fibonacci(0).toBe("Invalid parameter"));
+    expect(fibonacci(0)).toBe("Invalid parameter");
 });
