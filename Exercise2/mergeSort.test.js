@@ -12,6 +12,10 @@ test('Passing in an array with only one member returns the same array', () => {
     expect(mergeSort([1])).toStrictEqual([1]);
 });
 
+test('Array with two values gets sorted', () => {
+    expect(mergeSort([3, 2])).toStrictEqual([2, 3]);
+});
+
 test('Even array w/o duplicates gets sorted correctly', () => {
     expect(mergeSort([3, 2, 1, 7])).toStrictEqual([1, 2, 3, 7]);
 });
