@@ -15,19 +15,26 @@ function mergeSort(array) {
     console.log(left);
     left = mergeSort(left);
     console.log(left);
+    
     // Step 2: Sort the right side array
     console.log(right);
     right = mergeSort(right);
     console.log(right);
+
     // Step 3: Merge
-    const merged = merge(left, right);
-    return merged;
+    return merge(left, right);
 }      
 
 function merge(left, right) {
     const merged = [];
 
     for (let i = 0; i < right.length; i ++) {   // Because I use floor, if one side is bigger, it will be the right side. 
+        // When numbers are odd
+        if (!left[i]) {
+            merged.push(right[i]);
+            break;
+        }
+        
         if (left[i] <= right[i]) {
             merged.push(left[i]);
             merged.push(right[i]);
