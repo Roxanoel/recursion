@@ -2,6 +2,7 @@ function mergeSort(array) {
     // Excluded cases
     if(!Array.isArray(array) || isNaN(array[0])) return 'Please pass in an array of numbers';
 
+    // Base case
     if(array.length === 1) return array;
 
     // If array is bigger than 1, cut it in two
@@ -12,11 +13,9 @@ function mergeSort(array) {
 
     // Step 1: Sort the left side array
     left = mergeSort(left);
-    console.log(left);
 
     // Step 2: Sort the right side array
     right = mergeSort(right);
-    console.log(right);
 
     // Step 3: Merge
     return merge(left, right);
@@ -28,14 +27,14 @@ function merge(left, right) {
     while (left.length > 0 && right.length > 0) {   
         
         if (left[0] < right[0]) {
-            // add left at the end of the merged array
+            // add left to the merged array
             merged.push(left[0]);
             // remove left[0] from left
             left.shift();
         } else {
-            // add right to the end of the merged array
+            // add right to the merged array
             merged.push(right[0]);
-            // remove right[0]
+            // remove right[0] from right 
             right.shift();
         }
     }
